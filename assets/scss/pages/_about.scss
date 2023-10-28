@@ -1,0 +1,71 @@
+//variable
+@use "../abstracts/variable" as var;
+//functions
+@use "../abstracts/functions" as func;
+//mixins
+@use "../abstracts/mixins" as mixins;
+
+//about-area
+.about-area {
+  background-color: func.theme-colors();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 20rem;
+  margin-top: 6rem;
+
+  //xs-aboutarea
+  @include mixins.responsive(xs) {
+    padding: 4rem 2rem;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  //about-image
+  &-img {
+    width: 32rem;
+
+    //xs-img
+    @include mixins.responsive(xs) {
+      width: 120%;
+      align-items: center;
+    }
+  }
+
+  //about-contents
+  &-contents {
+    color: #fff;
+
+    //xs-contents
+    @include mixins.responsive(xs) {
+      margin: 0;
+    }
+    //Title
+    h2 {
+      font-size: 3rem;
+
+      //xs-Title
+      @include mixins.responsive(xs) {
+        font-size: 1.5rem;
+      }
+    }
+
+    //paragraph
+    p {
+      line-height: 2;
+      color: #e1e1e1;
+
+      @include mixins.responsive(xs) {
+        font-size: 0.9rem;
+      }
+      //link-tag
+      a {
+        color: #fff;
+
+        //link-hover
+        &:hover {
+          text-shadow: 2px 2px 30px black;
+        }
+      }
+    }
+  }
+}

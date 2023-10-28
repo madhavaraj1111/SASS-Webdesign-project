@@ -1,0 +1,119 @@
+//functions
+@use "../abstracts/functions" as func;
+//mixins
+@use "../abstracts/mixins" as mixins;
+
+//courses
+.courses {
+  padding: 8rem 15rem;
+  background-color: func.theme-colors();
+
+  //xs-courses
+  @include mixins.responsive(xs) {
+    padding: 4rem 2rem;
+  }
+  //courses-heading
+  &-heading {
+    text-align: center;
+
+    //heading-h2
+    h2 {
+      color: #fff;
+      font-size: 2rem;
+
+      //xs-heading-h2
+      @include mixins.responsive(xs) {
+        font-size: 1.5rem;
+      }
+    }
+
+    //heading-paragraph
+    p {
+      font-size: 1rem;
+      color: rgb(235, 235, 235);
+
+      //xs-heading-paragraph
+      @include mixins.responsive(xs) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  //courses-cards
+  &-cards {
+    display: flex;
+    justify-content: space-between;
+
+    //xs-cards
+    @include mixins.responsive(xs) {
+      flex-direction: column;
+    }
+  }
+
+  //courses-card
+  &-card {
+    background-color: #fff;
+    max-width: 360px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    //courses-card-img
+    &-img {
+      width: 360px;
+    }
+
+    //courses-card-content
+    &-body {
+      padding: 2rem;
+
+      //h4
+      h4 {
+        font-size: 1.5rem;
+
+        //xs-h4
+        @include mixins.responsive(xs){
+          font-size:1.3rem;
+        }
+      }
+
+      //p
+      p {
+        color: gray;
+        line-height: 1.5rem;
+
+        //xs-p
+        @include mixins.responsive(xs){
+          font-size:0.9rem;
+        }
+      }
+    }
+
+    //link-tag
+    a {
+      color: rgba(0, 0, 0, 0.938);
+    }
+
+    //card-hovering
+
+    &:hover {
+      box-shadow: 2px 2px 20px 5px rgb(54, 54, 54, 0.5);
+    }
+  }
+
+  //courses-info
+  &-info {
+    text-align: center;
+    color: #e2dada;
+
+    //tag-link
+    a {
+      color: #fff;
+
+      //hovering-link
+      &:hover {
+        text-shadow: 3px 3px 10px #000;
+      }
+    }
+  }
+}

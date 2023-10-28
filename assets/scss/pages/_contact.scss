@@ -1,0 +1,52 @@
+//mixins
+@use "../abstracts/mixins" as mixins;
+
+//contact-section
+.contact {
+  padding: 8rem 20rem;
+  background-color: rgb(224, 224, 224);
+
+  //xs-contact-section
+  @include mixins.responsive(xs) {
+    padding: 4rem 2rem;
+  }
+  //contact-card
+  &-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(250, 250, 250);
+    align-items: center;
+    padding: 2rem 3rem;
+    border-radius: 0.8rem;
+
+    //xs-contact-card
+    @include mixins.responsive(xs) {
+      flex-direction: column;
+      align-items: initial;
+      padding: 2rem;
+    }
+    //contact-card-contents
+    &-contents {
+      flex-grow: 1;
+      //heading
+      h4 {
+        font-size: 1.2rem;
+
+        //xs-heading
+        @include mixins.responsive(xs) {
+          font-size: 1rem;
+        }
+      }
+      //paragraph
+      p {
+        margin-top: 10px;
+        color: gray;
+
+        //xs-paragraph
+        @include mixins.responsive(xs) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

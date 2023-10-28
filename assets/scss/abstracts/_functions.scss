@@ -1,0 +1,8 @@
+//getting map values from variable
+@use "../abstracts/variable" as variable;
+
+//function
+@function theme-colors($color: "primary") {
+  //returning colors
+  @return map-get(variable.$theme-colors, $color);
+}

@@ -1,0 +1,58 @@
+//functions
+@use "../abstracts/functions" as func;
+//mixins
+@use "../abstracts/mixins" as mixins;
+
+//footer
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+  background-color: func.theme-colors();
+
+  //h2
+  h2 {
+    font-weight: 500;
+
+    //xs-h2
+    @include mixins.responsive(xs) {
+      font-size: 1.2rem;
+    }
+  }
+  //para-text
+  p {
+    color: #dedede;
+
+    //xs-paragraph
+    @include mixins.responsive(xs) {
+      font-size: 0.9rem;
+    }
+  }
+
+  //tag
+  a {
+    color: #fff;
+
+    //hovering-tag
+    &:hover {
+      text-shadow: 2px 2px 15px black;
+    }
+  }
+
+  //social-icons
+  .social-icons > a > i {
+    font-size: 1.5rem;
+    padding: 0px 10px;
+    color: #801616;
+    transition: 500ms;
+    //hoveriing-social-icons
+    &:hover {
+      color: rgb(224, 224, 224);
+    }
+  }
+
+  //legal
+  .legal {
+    font-size: 0.9rem;
+  }
+}

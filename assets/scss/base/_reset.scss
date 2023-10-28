@@ -1,0 +1,19 @@
+//variable
+@use "../abstracts/variable" as variable;
+//imported font
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Tilt+Neon&display=swap");
+
+//universal
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: variable.$font-primary;
+  scroll-behavior: smooth;
+  scroll-margin-top: 50px;
+}
+
+//a tag
+a {
+  text-decoration: none;
+}

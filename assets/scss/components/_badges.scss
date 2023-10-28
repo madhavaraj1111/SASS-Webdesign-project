@@ -1,0 +1,15 @@
+//function
+@use "../abstracts/functions" as func;
+
+//badge
+.badge {
+  padding: 0px 10px;
+  border-radius: 10px;
+
+  //badge primary
+  &-primary {
+    @extend .badge;
+    background-color: func.theme-colors();
+    color: white;
+  }
+}

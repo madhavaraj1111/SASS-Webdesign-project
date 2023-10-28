@@ -1,0 +1,43 @@
+@use "../abstracts/variable" as variable;
+@use "../abstracts/functions" as func;
+
+//button
+.btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 0.98rem;
+  border: none;
+  outline: none;
+  display: inline-block;
+  cursor:pointer;
+
+  //button custom
+  &-primary {
+    @extend .btn;
+    background-color: func.theme-colors();
+    color: #fff;
+
+    //button-hover
+    &:hover {
+      background-color: func.theme-colors("primary-hover");
+      transition: 200ms;
+    }
+  }
+
+  //learn more btn
+  &-primary-outline {
+    @extend .btn;
+    background-color: #ffffff;
+    border: 2px solid func.theme-colors();
+    color: func.theme-colors();
+
+    //hovering in learn more btn
+    &:hover {
+      background-color: func.theme-colors();
+      color: white;
+      transition:200ms;
+    }
+  }
+}

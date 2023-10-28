@@ -1,0 +1,24 @@
+//base
+@import "../assets/scss/base/reset";
+@import "../assets/scss/base/global";
+
+//utilities
+@import "../assets/scss/utilities/animation";
+@import "../assets/scss/utilities/spacing";
+
+//components
+@import "../assets/scss/components/button";
+@import "../assets/scss/components/badges";
+@import "../assets/scss/components/forms";
+
+//layouts
+@import "../assets/scss/layouts/header";
+@import "../assets/scss/layouts/background_elements";
+@import "../assets/scss/layouts/footer";
+
+//pages
+@import "../assets/scss/pages/home";
+@import "../assets/scss/pages/about";
+@import "../assets/scss/pages/roadmap";
+@import "../assets/scss/pages/courses";
+@import "../assets/scss/pages/contact";

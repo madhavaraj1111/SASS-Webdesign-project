@@ -1,0 +1,42 @@
+//animation
+@use "../utilities/animation";
+//variable
+@use "../abstracts/variable" as variable;
+//mixins
+@use "../abstracts/mixins" as mixins;
+
+//font for {world}
+.font-ta {
+  font-family: variable.$font-world;
+}
+
+//animation
+.color-anim {
+  animation: color-change 10s infinite;
+  transition: 500ms;
+}
+
+//text-uppercase
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+//roadmap-section-line color
+.line {
+  width: 6rem;
+  height: 0.5rem;
+  border-radius: 6px;
+  margin: 30px auto;
+  background: linear-gradient(to right, #2d2ed4, #e24997);
+}
+
+//image-responsive
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+//font-weight
+.font-weight-400 {
+  font-weight: 400;
+}

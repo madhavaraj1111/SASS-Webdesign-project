@@ -1,0 +1,52 @@
+//mixins
+@use "../abstracts/mixins" as mixins;
+
+//hero area
+.hero-area {
+  padding: 8rem 20rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  //xs-heroarea
+  @include mixins.responsive(xs) {
+    padding: 4rem 2rem;
+    flex-direction: column;
+  }
+
+  //hero-content
+  &-contents {
+    max-width: 34rem;
+  }
+
+  //hero-title
+  &-title {
+    font-size: 3rem;
+    font-weight: 500;
+
+    //xs-title
+    @include mixins.responsive(xs) {
+      font-size: 2rem;
+    }
+
+    //xs-span
+    & > span {
+      @include mixins.responsive(xs) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  //hero-description
+  &-desc {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    color: gray;
+    line-height: 1.8;
+
+    //xs-description
+    @include mixins.responsive(xs) {
+      font-size: 0.9rem;
+    }
+  }
+}
